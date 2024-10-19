@@ -8,7 +8,7 @@ jobs:
       image: ghcr.io/cicdpf-actions/container_registry/python-test:master
     steps: #dockerコンテナ内でステップを実行
       - name: app.py
-        run: python app.py
+        run: python /app.py
 
 
     #   - name: Find app.py in src
