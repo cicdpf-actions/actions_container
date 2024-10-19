@@ -13,5 +13,4 @@ jobs:
           echo ${{ github.workspace }}
           echo ${GITHUB_WORKSPACE}
           ls -al ${GITHUB_WORKSPACE}
-
-          python3 --version
+          python ${GITHUB_WORKSPACE}/app.py
