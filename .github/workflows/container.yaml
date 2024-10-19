@@ -2,12 +2,16 @@ name: Container
 on: push
 
 jobs:
-  node-docker:
+  hello-world:
     runs-on: ubuntu-latest
     container: #起動するコンテナイメージを指定
       image: ghcr.io/cicdpf-actions/container_registry/python-test:master
     steps: #dockerコンテナ内でステップを実行
       - name: app.py
         run: |
+          pwd
+          echo ${{ github.workspace }}
+          ecbo ${GITHUB_WORKSPACE}
           ls -al ${GITHUB_WORKSPACE}
+
           python3 --version
