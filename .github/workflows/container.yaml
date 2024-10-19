@@ -10,7 +10,10 @@ jobs:
       - name: app.py
         run: |
           ls -al .
+          pwd
           ls -al /
+          cd /
+          pwd
           python /app.py  #.app.pyだとython: can't open file '/__w/actions_container/actions_container/app.py': [Errno 2] No such file or directoryと怒られる
 
 
