@@ -1,0 +1,12 @@
+name: Container
+on: push
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    container: #起動するコンテナイメージを指定
+      image: ghcr.io/cicdpf-actions/container_registry/python-test:master
+    steps: #dockerコンテナ内でステップを実行
+      - name: Log node version
+        run: |
+          python3 ./app.py 
