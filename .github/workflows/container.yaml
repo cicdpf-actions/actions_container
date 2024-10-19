@@ -7,6 +7,8 @@ jobs:
     container: #起動するコンテナイメージを指定
       image: ghcr.io/cicdpf-actions/container_registry/python-test:master
     steps: #dockerコンテナ内でステップを実行
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: app.py
         run: |
           pwd
