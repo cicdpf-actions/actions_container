@@ -11,7 +11,7 @@ jobs:
         run: |
           pwd
           echo ${{ github.workspace }}
-          ecbo ${GITHUB_WORKSPACE}
+          echo ${GITHUB_WORKSPACE}
           ls -al ${GITHUB_WORKSPACE}
 
           python3 --version
