@@ -8,7 +8,11 @@ jobs:
       image: ghcr.io/cicdpf-actions/container_registry/python-test:master
     steps: #dockerコンテナ内でステップを実行
       - name: app.py
-        run: python /app.py
+        run: |
+          ls -al .
+          ls -al /
+          python /app.py  #.app.pyだとython: can't open file '/__w/actions_container/actions_container/app.py': [Errno 2] No such file or directoryと怒られる
+
 
 
     #   - name: Find app.py in src
