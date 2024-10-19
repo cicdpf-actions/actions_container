@@ -12,5 +12,10 @@ jobs:
           pwd
           echo ${{ github.workspace }}
           echo ${GITHUB_WORKSPACE}
-          ls -al ${GITHUB_WORKSPACE}
+          ls -l ${GITHUB_WORKSPACE}
           find ${GITHUB_WORKSPACE} -name "app.py"
+
+      - name: Find app.py in src
+        run: |
+          echo "Searching for app.py in src..."
+          find ${GITHUB_WORKSPACE}/src -name "app.py"
