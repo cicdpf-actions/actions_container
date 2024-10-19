@@ -9,6 +9,5 @@ jobs:
     steps: #dockerコンテナ内でステップを実行
       - name: app.py
         run: |
-          ls -al
+          ls -al ${GITHUB_WORKSPACE}
           python3 --version
-          python3 app.py 
