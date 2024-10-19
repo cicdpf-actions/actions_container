@@ -9,15 +9,19 @@ jobs:
     steps: #dockerコンテナ内でステップを実行
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: app.py
-        run: |
-          pwd
-          echo ${{ github.workspace }}
-          echo ${GITHUB_WORKSPACE}
-          ls -la ${GITHUB_WORKSPACE}
-          ls -la ${{ github.workspace }}
+        run: python app.py
+
 
     #   - name: Find app.py in src
     #     run: |
     #       echo "Searching for app.py in src..."
     #       find ${GITHUB_WORKSPACE}/src -name "app.py"
+
+
+        #   pwd
+        #   echo ${{ github.workspace }}
+        #   echo ${GITHUB_WORKSPACE}
+        #   ls -la ${GITHUB_WORKSPACE}
+        #   ls -la ${{ github.workspace }}
